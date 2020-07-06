@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "VaporEcobee",
+    platforms: [
+       .macOS(.v10_15)
+    ],
     products: [
         .library(name: "VaporEcobee", targets: ["VaporEcobee"])
     ],
