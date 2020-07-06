@@ -6,7 +6,7 @@
 import Foundation
 
 /** Ecobee API */
-public struct API {
+public struct VaporEcobee {
 
     /// Whether to discard any errors when decoding optional properties
     public static var safeOptionalDecoding = false

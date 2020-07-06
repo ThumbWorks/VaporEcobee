@@ -1,10 +1,10 @@
-# API
+# VaporEcobee
 
 This is an api generated from a OpenAPI 3.0 spec with [SwagGen](https://github.com/yonaskolb/SwagGen)
 
 ## Operation
 
-Each operation lives under the `API` namespace and within an optional tag: `API(.tagName).operationId`. If an operation doesn't have an operationId one will be generated from the path and method.
+Each operation lives under the `VaporEcobee` namespace and within an optional tag: `VaporEcobee(.tagName).operationId`. If an operation doesn't have an operationId one will be generated from the path and method.
 
 Each operation has a nested `Request` and a `Response`, as well as a static `service` property
 
@@ -57,7 +57,7 @@ Example request (that is not neccessarily in this api):
 
 ```swift
 
-let getUserRequest = API.User.GetUser.Request(id: 123)
+let getUserRequest = VaporEcobee.User.GetUser.Request(id: 123)
 let apiClient = APIClient.default
 
 apiClient.makeRequest(getUserRequest) { apiResponse in
@@ -74,7 +74,7 @@ apiClient.makeRequest(getUserRequest) { apiResponse in
 }
 ```
 
-Each [Request](#request) also has a `makeRequest` convenience function that uses `API.shared`.
+Each [Request](#request) also has a `makeRequest` convenience function that uses `VaporEcobee.shared`.
 
 #### APIResponse
 The `APIResponse` that gets passed to the completion closure contains the following properties:
@@ -88,7 +88,7 @@ The `APIResponse` that gets passed to the completion closure contains the follow
 
 #### Encoding and Decoding
 Only JSON requests and responses are supported. These are encoded and decoded by `JSONEncoder` and `JSONDecoder` respectively, using Swift's `Codable` apis.
-There are some options to control how invalid JSON is handled when decoding and these are available as static properties on `API`:
+There are some options to control how invalid JSON is handled when decoding and these are available as static properties on `VaporEcobee`:
 
 - `safeOptionalDecoding`: Whether to discard any errors when decoding optional properties. Defaults to `true`.
 - `safeArrayDecoding`: Whether to remove invalid elements instead of throwing when decoding arrays. Defaults to `true`.
@@ -158,6 +158,6 @@ To add support for a specific asynchronous library, just add an extension on `AP
 
 ## Requests
 
-- **API.GetThemostatSummary**: GET `/themostatsummary`
-- **API.Developers**
+- **VaporEcobee.GetThemostatSummary**: GET `/themostatsummary`
+- **VaporEcobee.Developers**
 	- **RefreshToken**: POST `/token`

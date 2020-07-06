@@ -3,18 +3,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "API",
+    name: "VaporEcobee",
     platforms: [
        .macOS(.v10_15)
     ],
     products: [
-        .library(name: "API", targets: ["API"])
+        .library(name: "VaporEcobee", targets: ["VaporEcobee"])
     ],
     dependencies: [
         .package(url: "https://github.com/Vapor/Vapor.git", .exact("4.14.0")),
     ],
     targets: [
-        .target(name: "API", dependencies: [
+        .target(name: "VaporEcobee", dependencies: [
           "Vapor",
         ], path: "Sources")
     ]

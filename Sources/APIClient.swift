@@ -34,7 +34,7 @@ public class APIClient {
         self.behaviours = behaviours
         self.defaultHeaders = defaultHeaders
         jsonDecoder.dateDecodingStrategy = .custom(dateDecoder)
-        jsonEncoder.dateEncodingStrategy = .formatted(API.dateEncodingFormatter)
+        jsonEncoder.dateEncodingStrategy = .formatted(VaporEcobee.dateEncodingFormatter)
     }
 
     /// Makes a network request

@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension API.Developers {
+extension VaporEcobee.Developers {
 
     /**
     Refreshing Your Tokens

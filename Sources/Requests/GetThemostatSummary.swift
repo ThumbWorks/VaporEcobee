@@ -5,7 +5,7 @@
 
 import Foundation
 
-extension API {
+extension VaporEcobee {
 
     /**
     Thermostat Summary (Polling)
