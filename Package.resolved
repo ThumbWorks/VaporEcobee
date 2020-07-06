@@ -111,7 +111,7 @@
       },
       {
         "package": "vapor",
-        "repositoryURL": "https://github.com/Vapor/Vapor.git",
+        "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
           "revision": "dc2aa1e02e04a47b67cb0dabed628fe844900f30",
