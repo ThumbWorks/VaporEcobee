@@ -151,6 +151,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 ## Models
 
 - **AccessTokenRequest**
+- **AccessTokenResponse**
 - **Runtime**
 - **Thermostat**
 - **ThermostatPage**
@@ -158,6 +159,6 @@ To add support for a specific asynchronous library, just add an extension on `AP
 
 ## Requests
 
-- **VaporEcobee.GetThemostatSummary**: GET `/themostatsummary`
+- **VaporEcobee.GetThermostatSummary**: GET `/thermostatsummary`
 - **VaporEcobee.Developers**
 	- **RefreshToken**: POST `/token`
