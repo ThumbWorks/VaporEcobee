@@ -7,7 +7,8 @@ import Vapor
 
 extension Client {
    func refreshToken(headers:  HTTPHeaders) -> EventLoopFuture<[AccessTokenRequest]> {
-      send(.POST, headers: headers, to: "/token")
+      let uri = URI(string: "\(Server.main)/token")
+      return send(.POST, headers: headers, to: uri)
          .flatMapThrowing { clientResponse  in
                 return try clientResponse.content.decode([AccessTokenRequest].self)
       }
