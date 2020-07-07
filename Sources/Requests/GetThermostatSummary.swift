@@ -6,6 +6,7 @@
 import Vapor
 
 extension Client {
+
    func getThermostatSummary(headers:  HTTPHeaders) -> EventLoopFuture<AccessTokenResponse> {
       let uri = URI(string: "\(Server.main)/thermostatSummary")
       return send(.GET, headers: headers, to: uri)

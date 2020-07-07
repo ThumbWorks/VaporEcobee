@@ -6,6 +6,7 @@
 import Vapor
 
 extension Client {
+
    func refreshToken(headers:  HTTPHeaders) -> EventLoopFuture<[AccessTokenRequest]> {
       let uri = URI(string: "\(Server.main)/token")
       return send(.POST, headers: headers, to: uri)
